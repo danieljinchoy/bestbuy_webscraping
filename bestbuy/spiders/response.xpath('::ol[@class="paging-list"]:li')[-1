@@ -1,0 +1,29 @@
+response.xpath('//ol[@class="paging-list"]/li')[-1]
+
+response.xpath('//ol[@class="paging-list"]/li')[-1].xpath('./a/text()').extract_first()
+
+response.xpath('//ol[@class="paging-list"]/li')[-1].xpath('./a/text()').extract_first()
+
+
+
+
+scrapy shell -s USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36" 
+"https://www.bestbuy.com/site/all-laptops/pc-laptops/pcmcat247400050000.c?id=pcmcat247400050000"
+
+
+
+find pattern:
+
+
+https://www.bestbuy.com/site/all-laptops/pc-laptops/pcmcat247400050000.c?id=pcmcat247400050000
+https://www.bestbuy.com/site/all-laptops/pc-laptops/pcmcat247400050000.c?id=pcmcat247400050000
+
+
+'//div[@class="sku-title"]/h4/a/@href'
+
+'//h4[@class="sku-header"]/a/@href'
+
+products = response.xpath('//h4[@class="sku-header"]/a/@href').extract()
+
+
+response.xpath('..h1[@class="heading-5 v-fw-regular"]/text()').extract_first()
